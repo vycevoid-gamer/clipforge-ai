@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090f">
+  <title>ClipForge AI - Video Clipper</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-icon">✂</div>
+      <span>ClipForge <b>AI</b></span>
+    </div>
+
+    <p class="nav-label">WORKSPACE</p>
+    <a class="nav active" href="#">▦ &nbsp; Dashboard</a>
+    <a class="nav" href="#settings">⚙ &nbsp; Clip Settings</a>
+    <a class="nav" href="#features">✦ &nbsp; AI Features</a>
+
+    <div class="sidebar-bottom">
+      <div class="plan">
+        <span class="plan-dot"></span>
+        LOCAL PROJECT
+        <p>Your creative workspace</p>
+      </div>
+      <p class="copyright">CLIPFORGE AI © 2026</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">YOUR AI VIDEO STUDIO</p>
+        <h2>Dashboard</h2>
+      </div>
+      <div class="avatar">C</div>
+    </header>
+
+    <section class="welcome">
+      <div>
+        <span class="tag">✦ AI POWERED VIDEO EDITING</span>
+        <h1>Turn long videos into<br><span>short-form magic.</span></h1>
+        <p>Find the best moments. Create engaging Shorts. All in one place.</p>
+      </div>
+      <div class="welcome-art">✂</div>
+    </section>
+
+    <section class="workspace">
+      <div class="section-heading">
+        <div>
+          <h3>New project</h3>
+          <p>Start with a video you have permission to edit.</p>
+        </div>
+        <span class="step">STEP 01 / 03</span>
+      </div>
+
+      <div class="input-card">
+        <label for="videoUrl">YouTube video reference (optional)</label>
+        <input id="videoUrl" type="url"
+          placeholder="https://www.youtube.com/watch?v=...">
+
+        <div class="or"><span>OR UPLOAD AUTHORIZED VIDEO</span></div>
+
+        <label class="upload-area" for="videoFile" id="dropArea">
+          <div class="upload-icon">↑</div>
+          <h3>Drop your video here</h3>
+          <p>or <span>browse files</span> from your computer</p>
+          <small>MP4, MOV or WebM</small>
+          <input type="file" id="videoFile"
+            accept="video/mp4,video/quicktime,video/webm">
+        </label>
+
+        <div id="fileInfo" class="file-info hidden"></div>
+      </div>
+    </section>
+
+    <section class="settings" id="settings">
+      <div class="section-heading">
+        <div>
+          <h3>Clip preferences</h3>
+          <p>Customize how your Shorts should look.</p>
+        </div>
+        <span class="step">STEP 02 / 03</span>
+      </div>
+
+      <div class="settings-grid">
+        <div class="setting-card">
+          <label for="duration">Clip duration</label>
+          <select id="duration">
+            <option value="15">15 seconds</option>
+            <option value="30" selected>30 seconds</option>
+            <option value="45">45 seconds</option>
+            <option value="60">60 seconds</option>
+          </select>
+        </div>
+
+        <div class="setting-card">
+          <label for="clipCount">Number of clips</label>
+          <select id="clipCount">
+            <option>2</option>
+            <option selected>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+
+        <div class="setting-card">
+          <label for="captionStyle">Caption style</label>
+          <select id="captionStyle">
+            <option value="bold">Bold animated</option>
+            <option value="minimal">Minimal white</option>
+            <option value="karaoke">Karaoke highlight</option>
+          </select>
+        </div>
+
+        <div class="setting-card">
+          <label for="music">Background music</label>
+          <select id="music">
+            <option value="none">No music</option>
+            <option value="energetic">Energetic</option>
+            <option value="cinematic">Cinematic</option>
+            <option value="chill">Chill</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="section-heading">
+        <div>
+          <h3>AI enhancements</h3>
+          <p>Choose the improvements you want.</p>
+        </div>
+        <span class="step">STEP 03 / 03</span>
+      </div>
+
+      <div class="feature-grid">
+        <label class="feature">
+          <input type="checkbox" id="hooks" checked>
+          <span class="feature-icon">✦</span>
+          <span><b>AI Hooks</b><small>Generate opening hooks</small></span>
+        </label>
+
+        <label class="feature">
+          <input type="checkbox" id="captions" checked>
+          <span class="feature-icon">▤</span>
+          <span><b>Auto captions</b><small>Animated subtitles</small></span>
+        </label>
+
+        <label class="feature">
+          <input type="checkbox" id="faceTracking" checked>
+          <span class="feature-icon">◎</span>
+          <span><b>Face tracking</b><small>Smart vertical framing</small></span>
+        </label>
+
+        <label class="feature">
+          <input type="checkbox" id="silence" checked>
+          <span class="feature-icon">◖</span>
+          <span><b>Smart cuts</b><small>Remove long silences</small></span>
+        </label>
+
+        <label class="feature">
+          <input type="checkbox" id="effects" checked>
+          <span class="feature-icon">✧</span>
+          <span><b>Visual effects</b><small>Smart zoom and emphasis</small></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="generate-section">
+      <button id="generateBtn" class="generate-btn">
+        ✦ &nbsp; Generate my clips
+      </button>
+      <p id="status">Your video will be processed after the backend is connected.</p>
+    </section>
+
+    <footer>
+      <span>CLIPFORGE AI</span>
+      <span>CREATE · EDIT · SHARE</span>
+    </footer>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
